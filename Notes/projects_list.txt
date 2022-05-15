@@ -3,15 +3,20 @@ https://github.com/MadhuNimmo/calculator
 
 todomvc
 https://github.com/tastejs/todomvc
+fork: https://github.com/Pjsrcool/todomvc
 
 emoji-search
 https://github.com/ahfarmer/emoji-search
+fork: https://github.com/Pjsrcool/emoji-search
 
 bmi-calculator
 https://github.com/GermaVinsmoke/bmi-calculator
+fork: https://github.com/Pjsrcool/bmi-calculator
 
 react-image-compressor
 https://github.com/Rahul-Pandey7/react-image-compressor
+fork: https://github.com/Pjsrcool/react-image-compressor
 
 react-tutorial-solutions
 https://github.com/harman052/react-tutorial-solutions
+fork: https://github.com/Pjsrcool/react-tutorial-solutions
