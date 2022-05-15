@@ -1,0 +1,17 @@
+calculator
+https://github.com/MadhuNimmo/calculator
+
+todomvc
+https://github.com/tastejs/todomvc
+
+emoji-search
+https://github.com/ahfarmer/emoji-search
+
+bmi-calculator
+https://github.com/GermaVinsmoke/bmi-calculator
+
+react-image-compressor
+https://github.com/Rahul-Pandey7/react-image-compressor
+
+react-tutorial-solutions
+https://github.com/harman052/react-tutorial-solutions

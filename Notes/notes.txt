@@ -1,0 +1,20 @@
+when exporting a puppeteeer script from Google Chrome,
+update the browser launch parameter to include:
+
+const browser = await puppeteer.launch({ headless: false })
+
+otherwise, the browser will not launch and show a live
+replay. default {headless : true}, which runs the replay
+int he background
+
+
+todo:
+learn difference between es5 and es6
+make sure everything works in ES5
+learn Babel and webpack
+compile es6 to es5
+try to increase code coverage in recordings to 50% +
+put everything in github
+
+
+remind madhurima to send module to compute code size (LOC)
