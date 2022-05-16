@@ -1,3 +1,4 @@
+Enable live chromium replay:
 when exporting a puppeteeer script from Google Chrome,
 update the browser launch parameter to include:
 
@@ -7,25 +8,36 @@ otherwise, the browser will not launch and show a live
 replay. default {headless : true}, which runs the replay
 int he background
 
+------------
+
+Prevent automatic open of browser:
+create .env file in project root directory.
 in .env, add BROSWER=none to disable browser from automatically
 starting when running project
 
+-------------
+
 Babel:
-install babel per project and make "es5" branch
-npm install -D babel-core
-npm install -D babel-cli
-npm install -D babel-preset-env
+install babel per project and make "es5" branch from main/master:
+git checkout -b es5
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
+
+as needed:
+npm install --save-dev @babel/plugin-syntax-jsx
+
 create .babelrc with 
 
 {
-    "presets" : ["env"]
+    "presets" : ["@babel/preset-env"],
+    "plugins" : ["@babel/plugin-syntax-jsx"]    // as needed
 }
 
-add in scripts
-"es5": "babel src -d src",
+add in scripts inside package.json
+"es5": "babel src -d src_ES5",
 
+run with: npm run es5
 
-
+-----------------
 
 
 todo:
