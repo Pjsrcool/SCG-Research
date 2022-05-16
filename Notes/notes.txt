@@ -7,6 +7,26 @@ otherwise, the browser will not launch and show a live
 replay. default {headless : true}, which runs the replay
 int he background
 
+in .env, add BROSWER=none to disable browser from automatically
+starting when running project
+
+Babel:
+install babel per project and make "es5" branch
+npm install -D babel-core
+npm install -D babel-cli
+npm install -D babel-preset-env
+create .babelrc with 
+
+{
+    "presets" : ["env"]
+}
+
+add in scripts
+"es5": "babel src -d src",
+
+
+
+
 
 todo:
 learn difference between es5 and es6
