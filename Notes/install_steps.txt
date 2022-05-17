@@ -28,3 +28,6 @@ To do recording:
 - to enable live replay make this change:
   in the exported recording JS file, updated the browser launch parameter to include {headless : false}
 - run the replay using "node recodring_name.js"
+
+For each project, see ES5 version on es5 branch.
+Steps used to convert to ES5 are on notes.txt

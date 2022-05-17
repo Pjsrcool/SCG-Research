@@ -1,3 +1,4 @@
+
 Enable live chromium replay:
 when exporting a puppeteeer script from Google Chrome,
 update the browser launch parameter to include:
@@ -11,9 +12,12 @@ int he background
 ------------
 
 Prevent automatic open of browser:
-create .env file in project root directory.
-in .env, add BROSWER=none to disable browser from automatically
-starting when running project
+By default, node automatically opens the default browser
+when running a project. To prevent this behavior,
+create a file called ".env" in project root directory.
+in .env, add:
+
+BROSWER=none
 
 -------------
 
@@ -22,31 +26,23 @@ install babel per project and make "es5" branch from main/master:
 git checkout -b es5
 npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
 
-as needed:
+install the jsx syntax plugin as needed:
 npm install --save-dev @babel/plugin-syntax-jsx
 
-create .babelrc with 
+most projects that use react need the jsx syntax plugin anyway:
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node @babel/plugin-syntax-jsx
+
+create .babelrc with the following content:
 
 {
     "presets" : ["@babel/preset-env"],
     "plugins" : ["@babel/plugin-syntax-jsx"]    // as needed
 }
 
-add in scripts inside package.json
+inside package.json, add this script:
 "es5": "babel src -d src_ES5",
 
-run with: npm run es5
+run with:
+npm run es5
 
 -----------------
-
-
-todo:
-learn difference between es5 and es6
-make sure everything works in ES5
-learn Babel and webpack
-compile es6 to es5
-try to increase code coverage in recordings to 50% +
-put everything in github
-
-
-remind madhurima to send module to compute code size (LOC)
