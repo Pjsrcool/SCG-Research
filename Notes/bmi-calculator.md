@@ -7,16 +7,16 @@ To Install and run default project:
 1. clone project
 2. follow readme
 
-To deploy a local server:
-1. Update the `"homepage"` to `"/"`.
+To build and deploy the server:
+1. In `package.json`, update the `"homepage"` field to only `"/"`.
 2. Run `npm run build`
 3. Run the server with `serve -s build`
 
-The following steps were taken to convert the project to ES5:
-1. branch off `master` into `es5`
-2. Install the required plugins by running:\
+The following steps were taken to convert the project from ES6 to ES5:
+1. Branch off of `master` into a new branch `es5`
+2. Install the required Babel modules by running:\
  `npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node @babel/plugin-syntax-jsx @babel/plugin-transform-react-jsx`
-3. In package.json, add the following to the `"scripts"` field:
+3. In `package.json`, add the following to the `"scripts"` field:
 ```
 "es5": "babel src -d src"
 ```
