@@ -1,0 +1,33 @@
+bmi-calculator\
+https://github.com/Pjsrcool/bmi-calculator
+
+Checkout to branch "es5" to view ES5 version.
+
+To Install and run default project:
+1. clone project
+2. follow readme
+
+To deploy a local server:
+1. Update the `"homepage"` to `"/"`.
+2. Run `npm run build`
+3. Run the server with `serve -s build`
+
+The following steps were taken to convert the project to ES5:
+1. branch off `master` into `es5`
+2. Install the required plugins by running:\
+ `npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node @babel/plugin-syntax-jsx @babel/plugin-transform-react-jsx`
+3. In package.json, add the following to the `"scripts"` field:
+```
+"es5": "babel src -d src"
+```
+4. In the root directory of the project, create file `.babelrc` with the following contents:
+```
+{
+	"presets" : ["@babel/preset-env"],
+	"plugins" : ["@babel/plugin-syntax-jsx",
+				 "@babel/plugin-transform-react-jsx"]
+}
+```
+5. Run `npm run es5`
+
+Basically, we generate ES5 files from the original ES6 files. Then we replace the original ES6 files with the new ES5 files. All this is done and saved in the `es5` branch.

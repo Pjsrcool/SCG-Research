@@ -22,27 +22,11 @@ BROSWER=none
 -------------
 
 Babel:
-install babel per project and make "es5" branch from main/master:
-git checkout -b es5
-npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
+see specific project md notes
 
-install the jsx syntax plugin as needed:
-npm install --save-dev @babel/plugin-syntax-jsx
+-----------------
 
-most projects that use react need the jsx syntax plugin anyway:
-npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node @babel/plugin-syntax-jsx
-
-create .babelrc with the following content:
-
-{
-    "presets" : ["@babel/preset-env"],
-    "plugins" : ["@babel/plugin-syntax-jsx"]    // as needed
-}
-
-inside package.json, add this script:
-"es5": "babel src -d src_ES5",
-
-run with:
-npm run es5
+cloc:
+cloc <folder> > <output file>
 
 -----------------
