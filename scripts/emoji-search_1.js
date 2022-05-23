@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer'); // v13.0.0 or later
 
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless:false});
     const page = await browser.newPage();
     const timeout = 5000;
     page.setDefaultTimeout(timeout);
@@ -150,38 +150,20 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
     }
     {
         const targetPage = page;
-        await targetPage.setViewport({"width":1905,"height":422})
+        await targetPage.setViewport({"width":1347,"height":952})
     }
     {
         const targetPage = page;
         const promises = [];
         promises.push(targetPage.waitForNavigation());
-        await targetPage.goto("http://localhost:3000/emoji-search");
+        await targetPage.goto("http://localhost:3000/");
         await Promise.all(promises);
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(1)"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 537, y: 39} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(2)"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 523, y: 52} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(14)"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 131, y: 17} });
     }
     {
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 386, y: 29} });
+        await element.click({ offset: { x: 106, y: 18} });
     }
     {
         const targetPage = page;
@@ -189,14 +171,14 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         await scrollIntoViewIfNeeded(element, timeout);
         const type = await element.evaluate(el => el.type);
         if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
-          await element.type("smile");
+          await element.type("hi");
         } else {
           await element.focus();
           await element.evaluate((el, value) => {
             el.value = value;
             el.dispatchEvent(new Event('input', { bubbles: true }));
             el.dispatchEvent(new Event('change', { bubbles: true }));
-          }, "smile");
+          }, "hi");
         }
     }
     {
@@ -211,61 +193,19 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(1)"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 177, y: 52} });
+        await element.click({ offset: { x: 87, y: 41} });
     }
     {
         const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(4)"]], targetPage, { timeout, visible: true });
+        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(1) > span.title"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 187, y: 24} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(10) > span.title"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 11, y: 15} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["aria/Wink"],["#root > div > div.component-emoji-results > div:nth-child(10) > img"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 12, y: 16} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["aria/Wink"],["#root > div > div.component-emoji-results > div:nth-child(10) > img"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 12, y: 16} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["aria/Wink"],["#root > div > div.component-emoji-results > div:nth-child(10) > img"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 12, y: 16} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(16)"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 138, y: 5} });
+        await element.click({ offset: { x: 36, y: 4} });
     }
     {
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 9, y: 17} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 80, y: 12} });
-    }
-    {
-        const targetPage = page;
-        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
-        await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 0, y: 25} });
+        await element.click({ offset: { x: 72, y: 20} });
     }
     {
         const targetPage = page;
@@ -273,14 +213,218 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         await scrollIntoViewIfNeeded(element, timeout);
         const type = await element.evaluate(el => el.type);
         if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
-          await element.type("aefawe");
+          await element.type("hi😆");
         } else {
           await element.focus();
           await element.evaluate((el, value) => {
             el.value = value;
             el.dispatchEvent(new Event('input', { bubbles: true }));
             el.dispatchEvent(new Event('change', { bubbles: true }));
-          }, "aefawe");
+          }, "hi😆");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type("😆");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, "😆");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type("");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, "");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type("upsid");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, "upsid");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-emoji-results > div"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await element.click({ offset: { x: 103, y: 5} });
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await element.click({ offset: { x: 100, y: 20} });
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type("🙃");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, "🙃");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type("");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, "");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type(" ");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, " ");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type("'");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, "'");
+        }
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.down("Enter");
+    }
+    {
+        const targetPage = page;
+        await targetPage.keyboard.up("Enter");
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        const type = await element.evaluate(el => el.type);
+        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+          await element.type("");
+        } else {
+          await element.focus();
+          await element.evaluate((el, value) => {
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }, "");
         }
     }
     {
