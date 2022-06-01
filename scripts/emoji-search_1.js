@@ -3,8 +3,8 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
 (async () => {
     const browser = await puppeteer.launch({headless:false});
     const page = await browser.newPage();
-    const timeout = 5000;
-    page.setDefaultTimeout(timeout);
+    const timeout = 0;
+    page.setDefaultTimeout(0);
 
     async function waitForSelectors(selectors, frame, options) {
       for (const selector of selectors) {
@@ -183,14 +183,6 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
     }
     {
         const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
-    }
-    {
-        const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-emoji-results > div:nth-child(1)"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
         await element.click({ offset: { x: 87, y: 41} });
@@ -213,48 +205,56 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         await scrollIntoViewIfNeeded(element, timeout);
         const type = await element.evaluate(el => el.type);
         if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
-          await element.type("hi😆");
+          await element.type("hi😆").then(async () => {
+            await page.keyboard.press("Enter");
+        });
         } else {
           await element.focus();
           await element.evaluate((el, value) => {
             el.value = value;
             el.dispatchEvent(new Event('input', { bubbles: true }));
             el.dispatchEvent(new Event('change', { bubbles: true }));
-          }, "hi😆");
+          }, "hi😆").then(async () => {
+            await page.keyboard.press("Enter");
+        });
         }
     }
-    {
+    /*{
         const targetPage = page;
         await targetPage.keyboard.down("Enter");
     }
     {
         const targetPage = page;
         await targetPage.keyboard.up("Enter");
-    }
+    }*/
     {
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
         const type = await element.evaluate(el => el.type);
         if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
-          await element.type("😆");
+          await element.type("😆").then(async () => {
+            await page.keyboard.press("Enter");
+        }); 
         } else {
           await element.focus();
           await element.evaluate((el, value) => {
             el.value = value;
             el.dispatchEvent(new Event('input', { bubbles: true }));
             el.dispatchEvent(new Event('change', { bubbles: true }));
-          }, "😆");
+          }, "😆").then(async () => {
+            await page.keyboard.press("Enter");
+        });
         }
     }
-    {
+    /*{
         const targetPage = page;
         await targetPage.keyboard.down("Enter");
     }
     {
         const targetPage = page;
         await targetPage.keyboard.up("Enter");
-    }
+    }*/
     {
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
@@ -270,14 +270,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             el.dispatchEvent(new Event('change', { bubbles: true }));
           }, "");
         }
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
+        await targetPage.keyboard.press("Enter");
     }
     {
         const targetPage = page;
@@ -294,14 +287,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             el.dispatchEvent(new Event('change', { bubbles: true }));
           }, "upsid");
         }
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
+        await targetPage.keyboard.press("Enter");
     }
     {
         const targetPage = page;
@@ -330,14 +316,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             el.dispatchEvent(new Event('change', { bubbles: true }));
           }, "🙃");
         }
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
+        await targetPage.keyboard.press("Enter");
     }
     {
         const targetPage = page;
@@ -354,14 +333,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             el.dispatchEvent(new Event('change', { bubbles: true }));
           }, "");
         }
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
+        await targetPage.keyboard.press("Enter");
     }
     {
         const targetPage = page;
@@ -378,14 +350,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             el.dispatchEvent(new Event('change', { bubbles: true }));
           }, " ");
         }
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
+        await targetPage.keyboard.press("Enter");
     }
     {
         const targetPage = page;
@@ -402,14 +367,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             el.dispatchEvent(new Event('change', { bubbles: true }));
           }, "'");
         }
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
+        await targetPage.keyboard.press("Enter");
     }
     {
         const targetPage = page;
@@ -426,15 +384,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             el.dispatchEvent(new Event('change', { bubbles: true }));
           }, "");
         }
+        await targetPage.keyboard.press("Enter");
     }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.down("Enter");
-    }
-    {
-        const targetPage = page;
-        await targetPage.keyboard.up("Enter");
-    }
-
     await browser.close();
 })();
