@@ -165,7 +165,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         await scrollIntoViewIfNeeded(element, timeout);
         await element.click({ offset: { x: 106, y: 18} });
     }
-    {
+    { // type "hi" into the search bar
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
@@ -199,7 +199,14 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         await scrollIntoViewIfNeeded(element, timeout);
         await element.click({ offset: { x: 72, y: 20} });
     }
-    {
+    { // press "Backspace" 2 times to clear the previous entry "hi"
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await page.keyboard.press("Backspace");
+        await page.keyboard.press("Backspace");
+    }
+    { // enter "hi😆" into the search bar
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
@@ -227,7 +234,15 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         const targetPage = page;
         await targetPage.keyboard.up("Enter");
     }*/
-    {
+    { // press "Backspace" 3 times to clear the previous entry "hi😆"
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await page.keyboard.press("Backspace");
+        await page.keyboard.press("Backspace");
+        await page.keyboard.press("Backspace");
+    }
+    { // enter the smile face emoji "😆" into the search box
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
@@ -246,6 +261,12 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
             await page.keyboard.press("Enter");
         });
         }
+    }
+    { // press "Backspace" 1 time1 to clear the previous entry "😆"
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await page.keyboard.press("Backspace");
     }
     /*{
         const targetPage = page;
@@ -272,7 +293,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         }
         await targetPage.keyboard.press("Enter");
     }
-    {
+    { // type "upsid" into the search bar
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
@@ -301,6 +322,16 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         await scrollIntoViewIfNeeded(element, timeout);
         await element.click({ offset: { x: 100, y: 20} });
     }
+    { // press backspace 5 times to clear previous input "upsid"
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await targetPage.keyboard.press("Backspace");
+        await targetPage.keyboard.press("Backspace");
+        await targetPage.keyboard.press("Backspace");
+        await targetPage.keyboard.press("Backspace");
+        await targetPage.keyboard.press("Backspace");
+    }
     {
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
@@ -317,6 +348,12 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
           }, "🙃");
         }
         await targetPage.keyboard.press("Enter");
+    }
+    { // press backspace 1 time to clear previous input "🙃"
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await targetPage.keyboard.press("Backspace");
     }
     {
         const targetPage = page;
@@ -335,7 +372,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         }
         await targetPage.keyboard.press("Enter");
     }
-    {
+    { // enter a space " " into the search box
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
@@ -352,7 +389,13 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         }
         await targetPage.keyboard.press("Enter");
     }
-    {
+    { // press backspace 1 time to clear previous input " "
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await targetPage.keyboard.press("Backspace");
+    }
+    { // enter "'" into the search box
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
@@ -368,6 +411,12 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
           }, "'");
         }
         await targetPage.keyboard.press("Enter");
+    }
+    { // press backspace 1 time to clear previous input "'"
+        const targetPage = page;
+        const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await targetPage.keyboard.press("Backspace");
     }
     {
         const targetPage = page;
