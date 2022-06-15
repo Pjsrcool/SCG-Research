@@ -1,10 +1,15 @@
 const puppeteer = require('puppeteer'); // v13.0.0 or later
+const jsCov = require('./jsCoverage.js');
 
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless:false});
     const page = await browser.newPage();
-    const timeout = 5000;
+    const timeout = 0;
     page.setDefaultTimeout(timeout);
+
+    await Promise.all([
+      jsCov.startJSCov(page.coverage)
+    ]);
 
     async function waitForSelectors(selectors, frame, options) {
       for (const selector of selectors) {
@@ -150,7 +155,7 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
     }
     {
         const targetPage = page;
-        await targetPage.setViewport({"width":941,"height":922})
+        await targetPage.setViewport({"width":790,"height":878})
     }
     {
         const targetPage = page;
@@ -161,38 +166,101 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
     }
     {
         const targetPage = page;
-        const element = await waitForSelectors([["aria/guaygoh9lzi81.png, Choose File"],["#root > div > div.row.mt-5 > div:nth-child(1) > div > input"]], targetPage, { timeout, visible: true });
+        const element = await waitForSelectors([["#root > div > div.row.mt-5 > div:nth-child(1) > img"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 79.375, y: 29.90625} });
+        await element.click({ offset: { x: 333, y: 299.21875} });
     }
     {
         const targetPage = page;
-        const element = await waitForSelectors([["aria/leslie f.png, Choose File"],["#root > div > div.row.mt-5 > div:nth-child(1) > div > input"]], targetPage, { timeout, visible: true });
+        const element = await waitForSelectors([["#root > div > div.row.mt-5"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        const type = await element.evaluate(el => el.type);
-        if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
-          await element.type("C:\\fakepath\\leslie f.png");
-        } else {
-          await element.focus();
-          await element.evaluate((el, value) => {
-            el.value = value;
-            el.dispatchEvent(new Event('input', { bubbles: true }));
-            el.dispatchEvent(new Event('change', { bubbles: true }));
-          }, "C:\\fakepath\\leslie f.png");
-        }
+        await element.click({ offset: { x: 458, y: 515.21875} });
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/No file chosen, Choose File"],["#root > div > div.row.mt-5 > div:nth-child(1) > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        // await element.click({ offset: { x: 74.25, y: 21.828125} });
+        await element.uploadFile("images/cute-baby-cats-wallpaper.jpg")
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/cute-baby-cats-wallpaper.jpg, Choose File"],["#root > div > div.row.mt-5 > div:nth-child(1) > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        // const type = await element.evaluate(el => el.type);
+        // if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+        //   await element.type("C:\\fakepath\\signal-2022-06-13-181335_003.jpeg");
+        // } else {
+        //   await element.focus();
+        //   await element.evaluate((el, value) => {
+        //     el.value = value;
+        //     el.dispatchEvent(new Event('input', { bubbles: true }));
+        //     el.dispatchEvent(new Event('change', { bubbles: true }));
+        //   }, "C:\\fakepath\\signal-2022-06-13-181335_003.jpeg");
+        // }
     }
     {
         const targetPage = page;
         const element = await waitForSelectors([["aria/Compress"],["#root > div > div.row.mt-5 > div.col-xl-4.col-lg-4.col-md-12.mb-5.mt-5.col-sm-12.d-flex.justify-content-center.align-items-baseline > button"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 80.953125, y: 27.90625} });
+        await element.click({ offset: { x: 63.453125, y: 20.84375} });
     }
     {
         const targetPage = page;
         const element = await waitForSelectors([["aria/Download"],["#root > div > div.row.mt-5 > div.col-xl-4.col-lg-4.col-md-12.col-sm-12.mt-3 > div > a"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await element.click({ offset: { x: 363.375, y: 19.03125} });
+        await element.click({ offset: { x: 278.25, y: 13.828125} });
     }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/Download"],["#root > div > div.row.mt-5 > div.col-xl-4.col-lg-4.col-md-12.col-sm-12.mt-3 > div > a"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await element.click({ offset: { x: 367.25, y: 14.828125} });
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/Compress"],["#root > div > div.row.mt-5 > div.col-xl-4.col-lg-4.col-md-12.mb-5.mt-5.col-sm-12.d-flex.justify-content-center.align-items-baseline > button"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await element.click({ offset: { x: 56.453125, y: 19.84375} });
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/cute-baby-cats-wallpaper.jpg, Choose File"],["#root > div > div.row.mt-5 > div:nth-child(1) > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        // await element.click({ offset: { x: 88.25, y: 23.84375} });
+        await element.uploadFile("images/Cute-Puppy-Background-Download-Free-1.jpg")
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/Cute-Puppy-Background-Download-Free-1.jpg, Choose File"],["#root > div > div.row.mt-5 > div:nth-child(1) > div > input"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        // const type = await element.evaluate(el => el.type);
+        // if (["textarea","select-one","text","url","tel","search","password","number","email"].includes(type)) {
+        //   await element.type("C:\\fakepath\\signal-2022-05-27-003416_001.jpeg");
+        // } else {
+        //   await element.focus();
+        //   await element.evaluate((el, value) => {
+        //     el.value = value;
+        //     el.dispatchEvent(new Event('input', { bubbles: true }));
+        //     el.dispatchEvent(new Event('change', { bubbles: true }));
+        //   }, "C:\\fakepath\\signal-2022-05-27-003416_001.jpeg");
+        // }
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/Compress"],["#root > div > div.row.mt-5 > div.col-xl-4.col-lg-4.col-md-12.mb-5.mt-5.col-sm-12.d-flex.justify-content-center.align-items-baseline > button"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await element.click({ offset: { x: 65.453125, y: 18.84375} });
+    }
+    {
+        const targetPage = page;
+        const element = await waitForSelectors([["aria/Download"],["#root > div > div.row.mt-5 > div.col-xl-4.col-lg-4.col-md-12.col-sm-12.mt-3 > div > a"]], targetPage, { timeout, visible: true });
+        await scrollIntoViewIfNeeded(element, timeout);
+        await element.click({ offset: { x: 379.25, y: 16.828125} });
+    }
+
+    const jsCoverage = await jsCov.stopJSCov(page.coverage);
+    await jsCov.parseJSCov(jsCoverage);
 
     await browser.close();
 })();
