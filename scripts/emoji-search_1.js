@@ -208,8 +208,9 @@ const jsCov = require('./jsCoverage.js');
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await page.keyboard.press("Backspace");
-        await page.keyboard.press("Backspace");
+        // await page.keyboard.press("Backspace");
+        // await page.keyboard.press("Backspace");
+        await element.evaluate(el => el.value = "");
     }
     { // enter "hi😆" into the search bar
         const targetPage = page;
@@ -243,9 +244,10 @@ const jsCov = require('./jsCoverage.js');
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await page.keyboard.press("Backspace");
-        await page.keyboard.press("Backspace");
-        await page.keyboard.press("Backspace");
+        // await page.keyboard.press("Backspace");
+        // await page.keyboard.press("Backspace");
+        // await page.keyboard.press("Backspace");
+        await element.evaluate(el => el.value = "");
     }
     { // enter the smile face emoji "😆" into the search box
         const targetPage = page;
@@ -271,7 +273,8 @@ const jsCov = require('./jsCoverage.js');
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await page.keyboard.press("Backspace");
+        // await page.keyboard.press("Backspace");
+        await element.evaluate(el => el.value = "");
     }
     /*{
         const targetPage = page;
@@ -331,11 +334,12 @@ const jsCov = require('./jsCoverage.js');
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await targetPage.keyboard.press("Backspace");
-        await targetPage.keyboard.press("Backspace");
-        await targetPage.keyboard.press("Backspace");
-        await targetPage.keyboard.press("Backspace");
-        await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        await element.evaluate(el => el.value = "");
     }
     {
         const targetPage = page;
@@ -358,7 +362,8 @@ const jsCov = require('./jsCoverage.js');
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        await element.evaluate(el => el.value = "");
     }
     {
         const targetPage = page;
@@ -398,7 +403,8 @@ const jsCov = require('./jsCoverage.js');
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        await element.evaluate(el => el.value = "");
     }
     { // enter "'" into the search box
         const targetPage = page;
@@ -421,7 +427,8 @@ const jsCov = require('./jsCoverage.js');
         const targetPage = page;
         const element = await waitForSelectors([["#root > div > div.component-search-input > div > input"]], targetPage, { timeout, visible: true });
         await scrollIntoViewIfNeeded(element, timeout);
-        await targetPage.keyboard.press("Backspace");
+        // await targetPage.keyboard.press("Backspace");
+        await element.evaluate(el => el.value = "");
     }
     {
         const targetPage = page;
