@@ -1,10 +1,15 @@
 const puppeteer = require('puppeteer'); // v13.0.0 or later
+const jsCov = require('./jsCoverage.js');
 
 (async () => {
     const browser = await puppeteer.launch({headless:false});
     const page = await browser.newPage();
     const timeout = 0;
     page.setDefaultTimeout(0);
+
+    await Promise.all([
+      jsCov.startJSCov(page.coverage)
+    ]);
 
     async function waitForSelectors(selectors, frame, options) {
       for (const selector of selectors) {
@@ -435,5 +440,9 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         }
         await targetPage.keyboard.press("Enter");
     }
+    
+    const jsCoverage = await jsCov.stopJSCov(page.coverage);
+    await jsCov.parseJSCov(jsCoverage);
+
     await browser.close();
 })();
