@@ -1,10 +1,15 @@
 const puppeteer = require('puppeteer'); // v13.0.0 or later
+const jsCov = require('./jsCoverage.js');
 
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless:false});
     const page = await browser.newPage();
-    const timeout = 5000;
+    const timeout = 0;
     page.setDefaultTimeout(timeout);
+
+    await Promise.all([
+      jsCov.startJSCov(page.coverage)
+    ]);
 
     async function waitForSelectors(selectors, frame, options) {
       for (const selector of selectors) {
@@ -279,6 +284,9 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
         await scrollIntoViewIfNeeded(element, timeout);
         await element.click({ offset: { x: 182, y: 39.625} });
     }
+
+    const jsCoverage = await jsCov.stopJSCov(page.coverage);
+    await jsCov.parseJSCov(jsCoverage);
 
     await browser.close();
 })();
