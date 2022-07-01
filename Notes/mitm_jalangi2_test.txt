@@ -1,0 +1,49 @@
+Try running with mitmproxy and jalangi2
+
+
+bmi-calculator
+in package.json, update "homepage" field to "homepage":"/"
+npm install
+npm run build  (using es6 files)
+ran with: serve -s build
+branch coverage analysis works
+
+calculator
+npm install
+npm run build  (using es6 files)
+ran with: serve -s build
+branch coverage analysis works
+
+emoji-search
+in package.json, update "homepage" field to "homepage":"/"
+npm install
+npm run build  (using es6 files)
+ran with: serve -s build
+branch coverage analysis works
+
+react-image-compressor
+in package.json, added "homepage":"/"
+npm install
+npm run build  (using es6 files)
+ran with: serve -s build
+branch coverage analysis works
+
+react-tutorial-solutions
+npm install
+npm run build  (using es6 files)
+ran with: serve -s build
+branch coverage analysis works
+
+
+For all 5 projects above:
+if I ran the project using "npm run start", then mitmproxy will 
+have an error with the following traceback:
+
+Traceback (most recent call last):
+  File "scripts/proxy.py", line 73, in processFile
+    with open (instrumentedFileName, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'cache/192.168.1.10/74fc559b34881a220f296e905c872cd8/bundle_jalangi_.js'
+
+Otherwise, I can confirm that jalangi2 BranchCoverage.js runs. The 
+"Jalangi" button still appears as expected, and I can view the
+results of the instrumentation by clicking on the "Jalangi" button.
