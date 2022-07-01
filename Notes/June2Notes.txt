@@ -1,9 +1,0 @@
-await page.$eval('#inputID', el => el.value = '');
-await page.type('#inputID', 'blah'); 
-
-make clear function for scripts?
- - make backspace more efficient
-add js coverage feature to scripts
-try to convert more projects to es5
-
-fix bmi-calculator?
