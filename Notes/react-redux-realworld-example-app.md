@@ -6,6 +6,12 @@ fork: https://github.com/Pjsrcool/react-redux-realworld-example-app
 2. install with ``yarn``
 3. run with ``yarn start``
 
+**To build and deploy the server:**
+1. In `package.json`, ensure that the `"homepage"` field is set to only `"/"`.
+2. Ensure that the necesarry packages are installed using `yarn`. Then run `yarn build`
+3. Ensure that the `serve` node package is installed globally. To install, use `npm install -g serve` or `yarn global add serve`
+4. Run the server with `serve -s build`
+
 **Watch limit error**\
 To fix the following error on Ubuntu based Linux distributions:
 ```
@@ -33,3 +39,24 @@ b''
 
 ```
 After instrumentation, the webpage will fail to load again, even if we restart the server with ``yarn start`` or ``serve -s build``. We fix this by clearing the browser's cache after each instrumentation.
+
+**\*\*WIP\*\* The following steps were taken to convert the project from ES6 to ES5:**
+Note: Branch `es5` already has these changes
+1. Branch off of `master` into a new branch `es5`
+2. Install the required Babel modules by running:\
+ `yarn add --save-dev @babel/core @babel/cli @babel/preset-env @babel/node @babel/plugin-syntax-jsx @babel/plugin-transform-react-jsx`
+3. In `package.json`, delete the `"babel"` field towards the bottom. And add the following to the `"scripts"` field:
+```
+"es5": "babel src -d src"
+```
+4. In the root directory of the project, create file `.babelrc` with the following contents:
+```
+{
+	"presets" : ["@babel/preset-env"],
+	"plugins" : ["@babel/plugin-syntax-jsx",
+				 "@babel/plugin-transform-react-jsx"]
+}
+```
+5. Run `yarn run es5`
+
+Basically, we generate ES5 files from the original ES6 files. Then we replace the original ES6 files with the new ES5 files. All this is done and saved in the `es5` branch.
