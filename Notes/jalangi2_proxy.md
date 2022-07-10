@@ -16,5 +16,10 @@ mitmdump --quiet --anticache -s scripts/proxy.py "--inlineIID --inlineSource --a
 NOTE: Currently, this will NOT work for all projects. I am still working on that.
 
 
-**Projects that don't work yet:**
-- react-tutorial-solutions
+**Projects tested:**
+- bmi-calculator: works
+- calculator: works
+- emoji-search: does NOT work. Google Chrome page is blank
+- react-image-compressor: does NOT work. Google Chrome page is blank
+- react-redux-realworld-example: works
+- react-tutorial-solutions: does NOT work. Google Chrome page is blank
