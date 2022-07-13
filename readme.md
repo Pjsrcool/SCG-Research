@@ -1,5 +1,5 @@
 Contents:
-- Notes folder contains information about the contents in this repo and its relevant information
+- Notes folder contains information about the contents in this repo and its relevant information. There is also a folder for outdated notes. I want to keep those for future reference.
 - scripts folder currently contains the puppeteer scripts recorded the recorder feature in Google Chrome
 
 Related repos:
