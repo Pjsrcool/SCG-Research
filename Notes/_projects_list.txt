@@ -25,3 +25,11 @@ fork: https://github.com/Pjsrcool/react-tutorial-solutions
 react-redux-realworld-example-app
 https://github.com/khaledosman/react-redux-realworld-example-app
 fork: https://github.com/Pjsrcool/react-redux-realworld-example-app
+
+realworld-example
+https://github.com/statiumjs/realworld-example
+fork: https://github.com/Pjsrcool/realworld-example
+
+imba-realworld-example-app
+https://github.com/cartonalexandre/imba-realworld-example-app
+fork: https://github.com/Pjsrcool/imba-realworld-example-app
