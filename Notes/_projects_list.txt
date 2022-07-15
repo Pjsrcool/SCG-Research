@@ -22,6 +22,40 @@ react-tutorial-solutions
 https://github.com/harman052/react-tutorial-solutions
 fork: https://github.com/Pjsrcool/react-tutorial-solutions
 
+** Realworld Apps **
+
+aurelia-realworld-example-app
+https://github.com/gothinkster/aurelia-realworld-example-app
+fork: https://github.com/Pjsrcool/aurelia-realworld-example-app
+
+crizmas-mvc-realworld-example-app
+https://github.com/gothinkster/crizmas-mvc-realworld-example-app
+fork: https://github.com/Pjsrcool/crizmas-mvc-realworld-example-app
+
+ember-realworld
+https://github.com/gothinkster/ember-realworld
+fork: https://github.com/Pjsrcool/ember-realworld
+
+hyperapp-realworld-example
+https://github.com/kwasniew/hyperapp-realworld-example-app
+fork: https://github.com/Pjsrcool/hyperapp-realworld-example-app
+
+imba-realworld-example-app
+https://github.com/cartonalexandre/imba-realworld-example-app
+fork: https://github.com/Pjsrcool/imba-realworld-example-app
+
+realworld-kingly-svelte
+https://github.com/brucou/realworld-kingly-svelte
+fork: https://github.com/brucou/realworld-kingly-svelte
+
+neomjs-realworld-example-app
+https://github.com/neomjs/neomjs-realworld-example-app
+fork: https://github.com/ucr-cs180-fall21/neomjs-realworld-example-app
+
+owl-realworld-app
+https://github.com/Coding-Dodo/owl-realworld-app
+fork: https://github.com/Pjsrcool/owl-realworld-app
+
 react-redux-realworld-example-app
 https://github.com/khaledosman/react-redux-realworld-example-app
 fork: https://github.com/Pjsrcool/react-redux-realworld-example-app
@@ -33,3 +67,27 @@ fork: https://github.com/Pjsrcool/realworld-example
 imba-realworld-example-app
 https://github.com/cartonalexandre/imba-realworld-example-app
 fork: https://github.com/Pjsrcool/imba-realworld-example-app
+
+react-vite-realworld-example-app
+https://github.com/romansndlr/react-vite-realworld-example-app
+fork: https://github.com/Pjsrcool/react-vite-realworld-example-app
+
+san-realworld-app
+https://github.com/ecomfe/san-realworld-app
+fork: https://github.com/Pjsrcool/san-realworld-app
+
+solid-realworld
+https://github.com/solidjs/solid-realworld
+fork: https://github.com/Pjsrcool/solid-realworld
+
+realworld
+https://github.com/sveltejs/realworld
+fork: https://github.com/Pjsrcool/realworld
+
+web-components-realworld-example-app
+https://github.com/gothinkster/web-components-realworld-example-app
+fork: https://github.com/Pjsrcool/web-components-realworld-example-app
+
+event-driven-web-components-realworld-example
+https://github.com/mits-gossau/event-driven-web-components-realworld-example-app
+fork: <Cannot fork: Is already a fork of imba-realworld-example-app>
