@@ -1,0 +1,144 @@
+[
+    {
+            "name": "calculator",
+            "original_repo": "https://github.com/MadhuNimmo/calculator",
+            "fork": "https://github.com/Pjsrcool/calculator",
+            "realworld": false
+    },
+    {
+            "name": "todomvc",
+            "original_repo": "https://github.com/tastejs/todomvc",
+            "fork": "https://github.com/Pjsrcool/todomvc",
+            "realworld": false
+    },
+    {
+            "name": "emoji-search",
+            "original_repo": "https://github.com/ahfarmer/emoji-search",
+            "fork": "https://github.com/Pjsrcool/emoji-search",
+            "realworld": false
+    },
+    {
+            "name": "bmi-calculator",
+            "original_repo": "https://github.com/GermaVinsmoke/bmi-calculator",
+            "fork": "https://github.com/Pjsrcool/bmi-calculator",
+            "realworld": false
+    },
+    {
+            "name": "react-image-compressor",
+            "original_repo": "https://github.com/Rahul-Pandey7/react-image-compressor",
+            "fork": "https://github.com/Pjsrcool/react-image-compressor",
+            "realworld": false
+    },
+    {
+            "name": "react-tutorial-solutions",
+            "original_repo": "https://github.com/harman052/react-tutorial-solutions",
+            "fork": "https://github.com/Pjsrcool/react-tutorial-solutions",
+            "realworld": false
+    },
+    {
+            "name": "aurelia-realworld-example-app",
+            "original_repo": "https://github.com/gothinkster/aurelia-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/aurelia-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "crizmas-mvc-realworld-example-app",
+            "original_repo": "https://github.com/gothinkster/crizmas-mvc-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/crizmas-mvc-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "ember-realworld",
+            "original_repo": "https://github.com/gothinkster/ember-realworld",
+            "fork": "https://github.com/Pjsrcool/ember-realworld",
+            "realworld": true
+    },
+    {
+            "name": "hyperapp-realworld-example-app",
+            "original_repo": "https://github.com/kwasniew/hyperapp-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/hyperapp-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "imba-realworld-example-app",
+            "original_repo": "https://github.com/cartonalexandre/imba-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/imba-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "realworld-kingly-svelte",
+            "original_repo": "https://github.com/brucou/realworld-kingly-svelte",
+            "fork": "https://github.com/brucou/realworld-kingly-svelte",
+            "realworld": true
+    },
+    {
+            "name": "neomjs-realworld-example-app",
+            "original_owner": "neomjs",
+            "original_repo": "https://github.com/neomjs/neomjs-realworld-example-app",
+            "fork": "",
+            "realworld": true,
+            "note": "Cannot fork: Is already a fork of another realworld app"
+    },
+    {
+            "name": "owl-realworld-app",
+            "original_repo": "https://github.com/Coding-Dodo/owl-realworld-app",
+            "fork": "https://github.com/Pjsrcool/owl-realworld-app",
+            "realworld": true
+    },
+    {
+            "name": "react-redux-realworld-example-app",
+            "original_repo": "https://github.com/khaledosman/react-redux-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/react-redux-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "realworld-example",
+            "original_repo": "https://github.com/statiumjs/realworld-example",
+            "fork": "https://github.com/Pjsrcool/realworld-example",
+            "realworld": true
+    },
+    {
+            "name": "imba-realworld-example-app",
+            "original_repo": "https://github.com/cartonalexandre/imba-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/imba-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "react-vite-realworld-example-app",
+            "original_repo": "https://github.com/romansndlr/react-vite-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/react-vite-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "san-realworld-app",
+            "original_repo": "https://github.com/ecomfe/san-realworld-app",
+            "fork": "https://github.com/Pjsrcool/san-realworld-app",
+            "realworld": true
+    },
+    {
+            "name": "solid-realworld",
+            "original_repo": "https://github.com/solidjs/solid-realworld",
+            "fork": "https://github.com/Pjsrcool/solid-realworld",
+            "realworld": true
+    },
+    {
+            "name": "realworld",
+            "original_repo": "https://github.com/sveltejs/realworld",
+            "fork": "https://github.com/Pjsrcool/realworld",
+            "realworld": true
+    },
+    {
+            "name": "web-components-realworld-example-app",
+            "original_repo": "https://github.com/gothinkster/web-components-realworld-example-app",
+            "fork": "https://github.com/Pjsrcool/web-components-realworld-example-app",
+            "realworld": true
+    },
+    {
+            "name": "event-driven-web-components-realworld-example-app",
+            "original_owner": "mits-gossau",
+            "original_repo": "https://github.com/mits-gossau/event-driven-web-components-realworld-example-app",
+            "fork": "",
+            "realworld": true,
+            "note": "Cannot fork: Is already a fork of realworld app"
+    }
+]
