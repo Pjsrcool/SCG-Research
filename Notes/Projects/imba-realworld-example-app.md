@@ -1,5 +1,5 @@
-**realworld-exampler**\
-fork: https://github.com/Pjsrcool/realworld-example
+**imba-realworld-example-app**\
+fork: https://github.com/Pjsrcool/imba-realworld-example-app
 
 **Installation**
 1. Clone the repo. Stay in main branch
