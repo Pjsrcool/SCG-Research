@@ -17,8 +17,10 @@ NOTE: Currently, this will NOT work for all projects. I am still working on that
 
 
 **Projects tested:**
+- aurelia-realworld-example-app: does NOT work. Using this project's .babelrc and .babelrc.js fails the babel cmd in proxy.py.
 - bmi-calculator: works
 - calculator: works
+- crizmas-mvc-realworld-example-app: does NOT work. Jalangi runs, but Google Chrome page is blank. We can manually convert this project to ES5 using its own babel config, but it will still fail when running though proxy (instrumentation runs, but Google Chrome displays a blank page) 
 - emoji-search: does NOT work. Google Chrome page is blank
 - react-image-compressor: does NOT work. Google Chrome page is blank
 - react-redux-realworld-example: works
