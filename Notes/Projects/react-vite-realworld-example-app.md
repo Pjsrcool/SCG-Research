@@ -9,4 +9,4 @@ fork: https://github.com/Pjsrcool/react-vite-realworld-example-app
 2. Run `serve -s dist`
 
 **Notes**
-- I need to figure out how to expost IP address when running `npm run serve`. When I try adding `--host`, the server fails to launch.
+- I need to figure out how to expost IP address when running `npm run serve`. When I try adding `--host`, the server fails to launch. Otherwise, `serve -s dist` is a good temporary workaround.
