@@ -1,5 +1,5 @@
 react-tutorial-solutions\
-https://github.com/Pjsrcool/react-tutorial-solutions
+fork: https://github.com/Pjsrcool/react-tutorial-solutions
 
 **Installation**
 1. Clone the repo. Stay in main branch

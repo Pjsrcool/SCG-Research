@@ -32,3 +32,11 @@ cloc <folder> > <output file>
 -----------------
 
 mitmdump --quiet --anticache -s scripts/proxy.py "--inlineIID --inlineSource --analysis src/js/sample_analyses/ChainedAnalyses.js --analysis src/js/sample_analyses/pldi16/BranchCoverage.js"
+
+-----------------
+
+nvm use <version>
+
+https://www.digitalocean.com/community/tutorials/nodejs-node-version-manager
+
+-----------------
