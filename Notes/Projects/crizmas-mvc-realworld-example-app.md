@@ -8,7 +8,8 @@ fork: https://github.com/Pjsrcool/crizmas-mvc-realworld-example-app
 1. Run `npm run build`
 2. Run `serve -s dist`
 
-**Convert to ES5 Using Babel**
+**Convert to ES5 Using Babel**\
+*The results of these steps are on branch `es5`*
 1. Run `npm install @babel/cli`
 2. Create a file `.babelrc` with the following contents
 ```

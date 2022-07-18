@@ -1,3 +1,5 @@
+# Babel  Config 1
+
 ## Babel Configuration Used
 *.babelrc*
 ```
