@@ -26,7 +26,7 @@ ember-realworld | No | Jalangi2 runs, but Google Chrome page is blank. Console r
 emoji-search | No | Google Chrome page is blank
 event-driven-web-components-realworld-example-app | ? | Currently having issues with installation and running
 hyperapp-realworld-example-app | Yes | Works over proxy/jalangi2 (both with and without babel transpile). This project comes with its own babel config
-imba-realworld-example-app | No | The babel cmd fails in the proxy, therefore, instrumentation does not occur
+imba-realworld-example-app | No | The babel cmd fails in the proxy, therefore, instrumentation does not occur for JS files
 neomjs-realworld-example-app | No | Ran project without build. Main page shows. Instrumentation does not trigger. Needs investigation
 owl-realworld-app | No | Google Chrome page is blank. Instrumentation does not run. Console reports error `Uncaught SyntaxError: Unexpected eval or arguments in strict mod`. Attempt as running the "es5" version results on blank page as well.
 react-image-compressor | No | Google Chrome page is blank
