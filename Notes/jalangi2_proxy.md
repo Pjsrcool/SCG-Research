@@ -14,3 +14,5 @@ mitmdump --quiet --anticache -s scripts/proxy.py "--inlineIID --inlineSource --a
 6. When running your node project, Make sure to build it and run it using `serve -s build`. Access it through your local network, not localhost. This will allow the proxy to intercept the project
 
 NOTE: Currently, this will NOT work for all projects. I am still working on that.
+
+See `Notes/jalangi2_proxy` for test results
