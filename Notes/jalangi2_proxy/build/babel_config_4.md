@@ -1,10 +1,14 @@
-# Babel Config 3
+# Babel Config 4
 
 ## Babel Configuration Used
 *.babelrc*
 ```
 {
-	"presets" : ["@babel/preset-env"]
+	"presets" : ["@babel/preset-env",
+			 	 "@babel/preset-react"],
+	"plugins" : ["@babel/plugin-syntax-jsx",
+		     "@babel/plugin-transform-react-jsx",
+			 "@babel/plugin-transform-runtime"]
 }
 ```
 
@@ -38,4 +42,4 @@ san-realworld-app
 web-components-realworld-example-app | ? | App cannot install properly
 
 ## Conclusion
-There were 20 projects tested.
+There were 20 projects tested. I was only able to install, build, and run 17 of them. Of the 17,

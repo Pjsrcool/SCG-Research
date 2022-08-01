@@ -1,0 +1,2 @@
+The `build` folder consists of results of running babel through the proxy on the build folder of each project.
+The `no-build` folder consists of results of running babel through the proxy on the project without building it first.
