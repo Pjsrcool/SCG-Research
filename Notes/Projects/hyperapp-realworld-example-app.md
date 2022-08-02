@@ -5,6 +5,9 @@ fork: https://github.com/Pjsrcool/hyperapp-realworld-example-app
 1. Clone the repo
 2. Run `npm i`
 
+**Run without build**
+1. run `npm start`
+
 **Build and Run the server**
 1. Run `npm run build`
 2. Run the server with `serve -s dist`
