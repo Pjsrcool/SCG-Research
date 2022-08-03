@@ -1,4 +1,4 @@
-# Babel Config 3
+# Babel Config 1
 
 ## Babel Configuration Used
 *.babelrc*
@@ -18,7 +18,7 @@ Each project was tested by installing then running locally. Find each project's 
 ## Projects tested
 Project | Works? | Notes
 ---|---|---
-aurelia-realworld-example-app | No | Launches an html page. As a result, Jalangi2 does not run.
+aurelia-realworld-example-app | No | Page loads forever. Jalangi button is unresponsive. Console reports `DevTools failed to load source map: Could not load content for http://<my ip>:8081/jquery.min.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE`
 bmi-calculator | Yes | 
 calculator | Yes | 
 crizmas-mvc-realworld-example-app | No | Jalangi2 runs and has results. The actual web page flashes once. Then only a blank page remains with a Jalangi button
@@ -26,7 +26,7 @@ ember-realworld | No | Jalangi runs, but the page is blank with a Jalangi button
 emoji-search | No | Google Chrome page is blank except for a `fork me on GitHub` button and a Jalangi button. Console reports error `Uncaught TypeError: Cannot read properties of undefined (reading 'webpackJsonpemoji-search')`
 event-driven-web-components-realworld-example-app | ? | Currently having issues with installation and running
 hyperapp-realworld-example-app | Yes | 
-imba-realworld-example-app | No | Babel crashes. Page still loads
+imba-realworld-example-app | No | Babel crashes. Page still loads. Jalangi page is blank.
 neomjs-realworld-example-app | No | Main page appears. Clicking the links to the projects takes us to a blank page. Jalangi button appears, but instrumentation runs. Probably because the links take us to html pages, not js pages.
 owl-realworld-app | No | Google Chome and Jalangi page is blank. Console reports error `Uncaught SyntaxError: Unexpected eval or arguments in strict mode`
 react-image-compressor | No | Only the Jalangi button and the blue background appears. Jalangi has a few results. Console reports error `Uncaught TypeError: Cannot read properties of undefined (reading 'webpackJsonpreact-image-compressor')`
