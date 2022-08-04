@@ -21,7 +21,7 @@ Each project was tested by installing then running locally. Find each project's 
 ## Projects tested
 Project | Works? | Notes
 ---|---|---
-aurelia-realworld-example-app | No | Page fails to load. Looks like Babel ran to completion, but transpilation is incorrect?
+aurelia-realworld-example-app | No | Page fails to load. Looks like Babel did not run to completion
 bmi-calculator | Yes |
 calculator | Yes | 
 crizmas-mvc-realworld-example-app | No | The correct web page flashed before resulting in a blank page. Jalangi page shows that instrumentation ran. Console reports error `Uncaught TypeError: Cannot read properties of null (reading 'length')`
