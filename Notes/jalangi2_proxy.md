@@ -7,12 +7,13 @@
 IP: 127.0.0.1
 Port: 8080 
 ```
-5. Start the proxy. See the official Jalangi2 readme.md for details. A sampele command for Linux is 
+5. Start the proxy. See the official Jalangi2 readme.md for details. A sample command for Linux is 
 ```
 mitmdump --quiet --anticache -s scripts/proxy.py "--inlineIID --inlineSource --analysis src/js/sample_analyses/ChainedAnalyses.js --analysis src/js/sample_analyses/pldi16/BranchCoverage.js"
 ```
-6. When running your node project, Make sure to build it and run it using `serve -s build`. Access it through your local network, not localhost. This will allow the proxy to intercept the project
+6. Access the project through local network to run it through the proxy
 
 NOTE: Currently, this will NOT work for all projects. I am still working on that.
 
 See `Notes/jalangi2_proxy` for test results
+Results in the `Notes/jalangi2_proxy/build` folder are from builing each project and running the the build. Results from `Notes/jalangi2_proxy/no-build` folder are from simply running the project
