@@ -1,14 +1,17 @@
-# Babel Config 5
+# Babel Config 6
 
 ## Babel Configuration Used
 *.babelrc*
 ```
 {
-	"presets" : ["@babel/preset-env",
+	"presets" : [["@babel/preset-env", {"modules": false}],
 				 "@babel/preset-react"],
 	"plugins" : [
 		"@babel/plugin-transform-classes",
-		"transform-remove-strict-mode"]
+		"transform-remove-strict-mode"],
+	"overrides": [{
+		"sourceType": "unambiguous"
+	}]
 }
 
 ```
