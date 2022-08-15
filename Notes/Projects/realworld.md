@@ -8,7 +8,7 @@ fork: https://github.com/Pjsrcool/realworld
 **Run without build**
 1. run `npm run dev -- --host`
 
-** Build and Run Server**
+**Build and Run Server**
 1. Run `npm run build`
 2. Run `npm run preview -- --host`
 

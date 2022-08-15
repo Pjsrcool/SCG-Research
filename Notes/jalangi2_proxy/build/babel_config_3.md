@@ -25,7 +25,7 @@ emoji-search | No | Google Chrome page is blank. Jalangi button works, and shows
 event-driven-web-components-realworld-example-app | ? | Currently having issues with installation and running
 hyperapp-realworld-example-app | Yes | 
 imba-realworld-example-app | No | Babel cmd in proxy fails. Instrumentation does NOT run on JS files
-neomjs-realworld-example-app | No | Ran project without build. Main page appears. Clicking the links to the projects takes us to a blank page. Jalangi button appears, but instrumentation runs. Probably because the links take us to `html` pages, not `js` pages.
+neomjs-realworld-example-app | No | Ran project without build. Main page appears. Clicking the links to the projects takes us to a blank page. Jalangi button appears, but jalangi page is blank. Probably because the links take us to `html` pages, not `js` pages.
 owl-realworld-app | No | Google Chrome page is blank. Jalangi page is blank as well. Console reports error `Uncaught SyntaxError: Unexpected eval or arguments in strict mode`
 react-image-compressor | No | Google Chrome page is blank. Instrumentation technically ran, but only return few results. Console reports error `Uncaught TypeError: Cannot read properties of undefined`
 react-redux-realworld-example | Yes | 
