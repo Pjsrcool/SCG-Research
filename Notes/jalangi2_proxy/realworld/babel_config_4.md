@@ -21,19 +21,14 @@ Each project was tested by installing, building, then serving from the build fol
 Project | Works? | Notes
 ---|---|---
 aurelia-realworld-example-app | No | Google Chrome page is blank. Console reports error `Uncaught ReferenceError: require is not defined`. Jalangi button appears but has no results
-bmi-calculator |  | 
-calculator | No | The black background appears, but nothing else does. Console reports error `Uncaught ReferenceError: require is not defined`
 crizmas-mvc-realworld-example-app | No | Google Chrome page is blank. Console reports error `Uncaught ReferenceError: require is not defined`. Jalangi has some results, but not all
 ember-realworld |  | 
-emoji-search |  | 
 event-driven-web-components-realworld-example-app | ? | Currently having issues with installation and running
 hyperapp-realworld-example-app |  | 
 imba-realworld-example-app |  | 
 neomjs-realworld-example-app |  | 
 owl-realworld-app |  | 
-react-image-compressor |  | 
 react-redux-realworld-example  |  | 
-react-tutorial-solutions |  | 
 react-vite-realworld-example-app |  | 
 realworld |  | 
 realworld-example |  | 
@@ -42,4 +37,3 @@ san-realworld-app |  |
 web-components-realworld-example-app | ? | App cannot install properly
 
 ## Conclusion
-There were 20 projects tested. I was only able to install, build, and run 17 of them. Of the 17,
