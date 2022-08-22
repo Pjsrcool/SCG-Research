@@ -140,5 +140,11 @@
             "fork": "",
             "realworld": true,
             "note": "Cannot fork: Is already a fork of realworld app"
+    },
+    {
+            "name": "js-framework-benchmark",
+            "orgininal_repo": "https://github.com/krausest/js-framework-benchmark/fork",
+            "fork": "https://github.com/Pjsrcool/js-framework-benchmark",
+            "realworld": false
     }
 ]
