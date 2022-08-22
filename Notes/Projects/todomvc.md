@@ -5,7 +5,7 @@ These examples are already compiled. To run them, we need to open the `html` fil
 
 Example | Install & Run Steps | Notes
 ---|---|---
-angular-dart | Open `html` file | Running `serve -s web` serves a semi-functioning site
+angular-dart | Open `html` file | Running `serve -s web` serves a site with wrong UI. Just running `serve` from the example root, then clicking `web/` serves a site with the correct UI, but does not save todo inputs.
 angular2 | ?? | tried running `ng serve` on node 16. tried switching to nodejs 12 to install and run `npm run dev`
 angular2_es2015
 angularjs | Open html file in example root | 
