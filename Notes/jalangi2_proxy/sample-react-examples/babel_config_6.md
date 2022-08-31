@@ -24,10 +24,11 @@ Each project was tested by installing, building, then serving from the build fol
 ## Projects tested
 Project | Works? | Notes
 ---|---|---
-bmi-calculator 
-calculator 
-emoji-search 
-react-image-compressor 
-react-tutorial-solutions 
+bmi-calculator | Yes |
+calculator | Yes |
+emoji-search | Yes | 
+react-image-compressor | Yes, kinda | Uploading and image works. Clicking the "compress" button does nothing. The "download" button shows a preview of a placeholder. Console reports error `Uncaught ReferenceError: J$ is not defined at ....`
+react-tutorial-solutions | Yes |
 
 ## Conclusion
+4/5 projects works completely. Only react-image-compressor has some issues. This may be a Jalangi2 issue though. Will need to investigate further.
