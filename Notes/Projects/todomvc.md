@@ -13,7 +13,7 @@ Replace `<directory>` with the absolute path to the example you want to run. Che
 
 Project | Specific Directory | Notes
 --|--|--
-angular-dart | `/todomvc/examples/angular-dart/web` | opens the todomvc app, but with missing/wrong gui. If we use `/todomvc/examples/angular-dart`, we get a web page allowing the user to chose a framework because there is no `index.html` file.
+angular-dart | `/todomvc/examples/angular-dart/web` | opens the todomvc app, but with missing/wrong gui. Everything still functions as expected though. If we use `/todomvc/examples/angular-dart`, we get a web page allowing the user to chose a framework because there is no `index.html` file.
 angular2 | `/todomvc/examples/angular2`
 angular2_es2015 | `/todomvc/examples/angular2_es2015`
 angularjs | `/todomvc/examples/angularjs` | Has a panel on the left linking to some resources
