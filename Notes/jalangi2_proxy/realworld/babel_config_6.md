@@ -38,7 +38,7 @@ owl-realworld-app
 react-image-compressor 
 react-redux-realworld-example  
 react-tutorial-solutions 
-react-vite-realworld-example-app 
+react-vite-realworld-example-app | No | The app functions, but Jalangi page is blank. Instrumentation fails in the mitmproxy console. Google Chrome console reports no errors.
 realworld 
 realworld-example 
 realworld-kingly-svelte | ? | App cannot install properly

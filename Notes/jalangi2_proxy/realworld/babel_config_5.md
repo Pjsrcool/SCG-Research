@@ -21,7 +21,7 @@ Each project was tested by installing, building, then serving from the build fol
 ## Projects tested
 Project | Works? | Notes
 ---|---|---
-aurelia-realworld-example-app | No | Google Chrome page is blank. Jalangi button is blank and is unresponsive. Console reports error `Uncaught SyntaxError: Unexpected token '<'`
+aurelia-realworld-example-app | No | Loading takes forever. Google Chrome page is blank. Jalangi button is blank and is unresponsive. Console reports error `Uncaught SyntaxError: Unexpected token '<'`. This error also appears when running the app normally, without trying to convert it to ES5.
 crizmas-mvc-realworld-example-app | Yes |
 ember-realworld | No | Google Chrome page is blank. Jalangi has some results. Console reports errors `Uncaught SyntaxError: Unexpected token '<'` and `Uncaught ReferenceError: require is not defined`
 event-driven-web-components-realworld-example-app | ? | Currently having issues with installation and running
@@ -31,7 +31,7 @@ neomjs-realworld-example-app | No | Ran project without build. Main page appears
 owl-realworld-app | No | Google Chrome page and Jalangi page is blank. Console reports error `Uncaught SyntaxError: Unexpected eval or arguments in strict mode`
 react-redux-realworld-example | Yes |
 react-vite-realworld-example-app | No | Google Chrome and Jalangi page is blank. Console reports error `Uncaught SyntaxError: Unexpected eval or arguments in strict mode`
-realworld | Yes? | Page loads and function. Looks like Instrumentation ran, but Jalangi page is blank.  Console reports error `Uncaught SyntaxError: Unexpected eval or arguments in strict mode`
+realworld | Yes | Page loads and function. Looks like Instrumentation ran, but Jalangi page is blank when using BranchCoverage.js. Jalangi page has a result when using TraceAll.js.  Console reports error `Uncaught SyntaxError: Unexpected eval or arguments in strict mode`
 realworld-example | No | Google Chrome page is blank. Jalangi has few results. Console reports error `Uncaught TypeError: Cannot read properties of undefined`
 realworld-kingly-svelte | ? | App cannot install properly
 san-realworld-app | Yes | 

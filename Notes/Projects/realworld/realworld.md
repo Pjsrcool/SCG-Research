@@ -14,4 +14,3 @@ fork: https://github.com/Pjsrcool/realworld
 
 **Notes**
 - node v14 is not supported here
-- This is the only project that was able to load data from the realworld server even though it is connecte through the proxy
