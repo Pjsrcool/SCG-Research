@@ -41,5 +41,4 @@ https://www.digitalocean.com/community/tutorials/nodejs-node-version-manager
 
 -----------------
 
-rm -rf cache && mitmdump --quiet --anticache -s scripts/proxy.py "--inlineIID --inlineSource --analysis src/js/sample_analyses/ChainedAnalyses.js --analysis src/js/sample_analyses/pldi16/BranchCoverage.js"
-Jalangi home is /home/justin/jalangi2
+clear && rm -rf cache && mitmdump --quiet --anticache -s scripts/proxy.py "--inlineIID --inlineSource --analysis src/js/sample_analyses/ChainedAnalyses.js --analysis src/js/sample_analyses/pldi16/BranchCoverage.js"
