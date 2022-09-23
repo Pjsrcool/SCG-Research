@@ -43,4 +43,4 @@ solid-realworld | No | The app loads. Jalangi page is blank. Instrumentation fai
 web-components-realworld-example-app | ? | App cannot install properly
 
 ## Conclusion
-There were 16 projects tested. 1/16 work. The most common error was `Uncaught TypeError: Assignment to constant variable.`
+There were 13/16 projects installed and build sucessfully. 1/13 of the projects converted to ES5 under proxy. The most common error was `Uncaught TypeError: Assignment to constant variable.`
