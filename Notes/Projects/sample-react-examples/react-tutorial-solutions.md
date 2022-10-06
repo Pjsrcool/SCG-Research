@@ -9,6 +9,7 @@ fork: https://github.com/Pjsrcool/react-tutorial-solutions
 1. run `npm start`
 
 **To build and run the server**
+1. In `package.json`, update the `homepage` field to `"/"`
 1. Run `npm run build`
 2. Start the server with `serve -s build`
 
