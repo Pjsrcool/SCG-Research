@@ -37,4 +37,4 @@ solid-realword | No | Google Chrome page loads, but Jalangi page is blank. Babel
 web-components-realworld-example-app | ? | App cannot install properly
 
 ## Conclusion
-There were 13/16 projects installed and build sucessfully. Of the 13 that ran, 6/13 sucessfully converted to ES5 and were Instrumented under mitmproxy.
+There were 13/16 projects installed and build sucessfully. Of the 13 that ran, 6/13 sucessfully converted to ES5 and were Instrumented under mitmproxy. The projects imba-realworld-example-app, neomjs-realworld-example-app, owl-realworld-app fail due to issues with strict mode. Most of other projects that failed seem to fail due to Instrumentation failing.
