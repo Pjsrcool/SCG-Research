@@ -1,4 +1,4 @@
-# Babel Config 6
+# Babel Config 7
 
 ## Babel Configuration Used
 *.babelrc*
@@ -27,7 +27,7 @@ hyperapp-realworld-example-app | Yes |
 imba-realworld-example-app | No | Page Loads. Babel crashed in the Jalangi console with error `SyntaxError: /home/justin/jalangi2/cache/0.0.0.0/a909311703e03ca838cdf676b6e036cd/index.js: Deleting local variable in strict mode`. Google Chrome console reports no errors.
 neomjs-realworld-example-app | No | Google Chrome page and Jalangi page is blank. In the dev builds, the Google Chrome console reports error: `Uncaught (in promise) SyntaxError: Unexpected eval or arguments in strict mode`
 owl-realworld-app | No | Google Chrome and Jalangi page is blank. Console reports error: `Uncaught SyntaxError: Unexpected eval or arguments in strict mode`
-react-redux-realworld-example | Yes | 
+react-redux-realworld-example-app | Yes | 
 react-vite-realworld-example-app | No | The app loads, but Jalangi page is blank. Babel ran sucessfully, but instrumentation failed with error: `FileNotFoundError: [Errno 2] No such file or directory`. Google Chrome console reports no errors.
 realworld | No | The app loads the Jalangi page is blank. Instrumentation fails with error: `FileNotFoundError: [Errno 2] No such file or directory`. 
 realworld-example | Yes |

@@ -1,4 +1,4 @@
-# Babel Config 6
+# Babel Config 7
 
 ## Babel Configuration Used
 *.babelrc*
